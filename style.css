@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --azul:  #4ec5e2;
+}
+body{
+    height: 100vh;
+}
+#container{
+    height: 100%;
+    padding:20px 50px;
+    /*#cf4917*/
+}
+#card{
+    width: 400px;
+    min-height: 5em;
+    max-height: 40em;
+    margin:20px auto;
+    padding: 15px 10px;
+    border-radius:0 0 10px 10px;
+    overflow: hidden;
+    color:#f13838;
+}
+
+header{
+    position: relative;
+    display:fleX;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+header strong {
+    font-size:2em;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+form{
+    display: flex;
+    justify-content: space-around;
+    gap: 2px;
+    margin-bottom: 12px;
+    padding: 7px;
+}
+form input{
+    height: 40px;
+    flex-grow: 3;
+    width: 80%;
+    max-width: 19em;
+    padding-left:10px ;
+    border-radius: 5px;
+    outline: none;
+    border:  1px solid #aa9d8f;
+    font-size: 25px;
+    color: #333; /*#79361d*/
+}
+input::placeholder{
+    color: #695e5a;
+}
+form button{
+    width: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color:#726965;
+    background-image: url('./assets/img/searchImg.png');
+    background-size: 120%;
+    background-blend-mode: color-dodge;
+    cursor: pointer;
+}
+#gitIcon{
+    height: 100px;
+    scale: 130%;
+}
+#result{
+    display: grid;
+    grid-column: 100%;
+    gap: 12px;
+    height: 28em;
+    max-height: 30em;
+    overflow-y:auto;
+    padding:5px;
+    font-family:cursive,sans-serif;
+}
+#result section{
+    display: grid;
+    display:flex;
+    flex-wrap: wrap;
+    border-radius: 7px;
+    align-items: center;
+    background-color: #7a87a1;;
+    background-color:#e07212;
+    color: #242020;
+    padding: 7px;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: -1px 3px 5px #353230;
+}
+#profile img{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd ;
+}
+#profile h2{
+    flex: 2;
+    padding-left: 15px;
+    font-size: 27px;
+}
+#delete{
+    width: 30px;
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+#result section strong{
+    font-size: 18px;
+}
+#result ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+section strong + p{
+    font-family: cursive;
+}
+
+@keyframes cardAnimation{
+    from{ position: relative;
+        top: 0;
+    }
+    to{
+        top: 20px;
+    }
+}
